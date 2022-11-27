@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25586d22-959f-4573-9024-ab74c10ce4c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/okhttp3/AddNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttp3/AddNewContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/okhttp3/DeleteContactByID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttp3/DeleteContactByID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/okhttp3/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttp3/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +58,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.AddNewContact.addNewContactWithInvalidEmail">
-    <configuration name="AddNewContact.addNewContactWithInvalidEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'restassured'">
+    <configuration name="Tests in 'restassured'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -71,7 +72,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttp3.AddNewContact.addNewContactWithInvalidEmail&quot;" />
+            <option value="&quot;restassured.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -81,7 +82,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DeleteContactByID.deleteContactsByIdContactAnyFormatError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateContact.updateContactEmailFormatError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -94,7 +95,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttp3.DeleteContactByID.deleteContactsByIdContactAnyFormatError&quot;" />
+            <option value="&quot;restassured.UpdateContact.updateContactEmailFormatError&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -104,7 +105,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DeleteContactByID.deleteContactsByIdContactNotFound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateContact.updateContactNotFound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -117,7 +118,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttp3.DeleteContactByID.deleteContactsByIdContactNotFound&quot;" />
+            <option value="&quot;restassured.UpdateContact.updateContactNotFound&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -127,7 +128,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DeleteContactByID.deleteContactsByIdUnauthorized" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateContact.updateContactPhoneFormatError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -140,7 +141,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttp3.DeleteContactByID.deleteContactsByIdUnauthorized&quot;" />
+            <option value="&quot;restassured.UpdateContact.updateContactPhoneFormatError&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -150,7 +151,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GetAllContacts.getAllContactsSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateContact.updateContactUnauthorized" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -163,7 +164,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttp3.GetAllContacts.getAllContactsSuccess&quot;" />
+            <option value="&quot;restassured.UpdateContact.updateContactUnauthorized&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AddNewContact.addNewContactWithInvalidEmail" />
-        <item itemvalue="Gradle.DeleteContactByID.deleteContactsByIdContactAnyFormatError" />
-        <item itemvalue="Gradle.DeleteContactByID.deleteContactsByIdContactNotFound" />
-        <item itemvalue="Gradle.DeleteContactByID.deleteContactsByIdUnauthorized" />
-        <item itemvalue="Gradle.GetAllContacts.getAllContactsSuccess" />
+        <item itemvalue="Gradle.Tests in 'restassured'" />
+        <item itemvalue="Gradle.UpdateContact.updateContactNotFound" />
+        <item itemvalue="Gradle.UpdateContact.updateContactUnauthorized" />
+        <item itemvalue="Gradle.UpdateContact.updateContactPhoneFormatError" />
+        <item itemvalue="Gradle.UpdateContact.updateContactEmailFormatError" />
       </list>
     </recent_temporary>
   </component>

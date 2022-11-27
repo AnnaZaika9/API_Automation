@@ -1,9 +1,11 @@
 package okhttp3;
 
 import config.Provider;
+import dto.ContactDto;
 import dto.ErrorDto;
 import dto.MessageDto;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -11,12 +13,44 @@ import java.io.IOException;
 
 public class DeleteContactByID {
     String token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoiZGFzaGFAdWtyLm5ldCIsImlzcyI6IlJlZ3VsYWl0IiwiZXhwIjoxNjY5NjU0NDM0LCJpYXQiOjE2NjkwNTQ0MzR9.ALFSYzBSTaYJGdQZJiyF1ywt9L2jt0p8lnD8nBGn8oU";
+    String id;
+    @BeforeMethod void addNewContact() throws IOException {
+        ContactDto contact = ContactDto.builder()
+                .name("Anna")
+                .lastName("Fox")
+                .email("anna@ukr.net")
+                .phone("0534445222")
+                .address("Tel Aviv")
+                .description("friend")
+                .build();
+        RequestBody body = RequestBody.create(Provider.getInstance().getGson().toJson(contact), Provider.getInstance().getJson());
 
+        Request request = new Request.Builder()
+                .url("https://contactapp-telran-backend.herokuapp.com/v1/contacts")
+                .addHeader("Authorization",token)
+                .post(body)
+                .build();
+
+        Response response = Provider.getInstance().getClient().newCall(request).execute();
+
+        Assert.assertTrue(response.isSuccessful());
+        Assert.assertEquals(response.code(), 200);
+
+        MessageDto message = Provider.getInstance().getGson().fromJson(response.body().string(), MessageDto.class);
+        System.out.println("Message: " + message.getMessage());
+        Assert.assertTrue(message.getMessage().contains("Contact was added!"));
+
+        String mess = message.getMessage();
+        String[]all = mess.split("ID: ");
+        id = all[1];
+        System.out.println(id);
+
+    }
 
     @Test
     public void deleteContactsByIdSuccess() throws IOException {
         Request request = new Request.Builder()
-                .url("https://contactapp-telran-backend.herokuapp.com/v1/contacts/697fe049-9184-4424-a5a8-161a7a70bd0a")
+                .url("https://contactapp-telran-backend.herokuapp.com/v1/contacts/"+id)
                 .addHeader("Authorization", token)
                 .delete()
                 .build();

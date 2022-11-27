@@ -44,9 +44,15 @@ public class AddNewContact {
         System.out.println("Message: " + message.getMessage());
         Assert.assertTrue(message.getMessage().contains("Contact was added!"));
 
-        String ID = Arrays.stream(message.getMessage().split(" ")).reduce((f, l) -> l).get();
-        System.out.println("ID: " + ID);
-        Assert.assertEquals(message.getMessage(),"Contact was added! ID: "+ ID );
+        String mess = message.getMessage();
+
+        String[]all = mess.split("ID: ");
+        String id = all[1];
+        System.out.println(id);
+
+//        String ID = Arrays.stream(message.getMessage().split(" ")).reduce((f, l) -> l).get();
+//        System.out.println("ID: " + ID);
+        Assert.assertEquals(message.getMessage(),"Contact was added! ID: "+ id );
 
     }
     @Test
@@ -76,7 +82,7 @@ public class AddNewContact {
         ErrorDto errorDto = Provider.getInstance().getGson().fromJson(response.body().string(),ErrorDto.class);
         Object message =  errorDto.getMessage();
         System.out.println("Message: " + message);
-     //   Assert.assertEquals(message,"must not be blank");
+        Assert.assertTrue(message.toString().contains("name=must not be blank"));
         Assert.assertEquals(errorDto.getError(),"Bad Request");
         Assert.assertEquals(errorDto.getStatus(),400);
     }
@@ -107,7 +113,7 @@ public class AddNewContact {
         ErrorDto errorDto = Provider.getInstance().getGson().fromJson(response.body().string(),ErrorDto.class);
         Object message =  errorDto.getMessage();
         System.out.println("Message: " + message);
-        //   Assert.assertEquals(message,"must not be blank");
+        Assert.assertTrue(message.toString().contains("lastName=must not be blank"));
         Assert.assertEquals(errorDto.getError(),"Bad Request");
         Assert.assertEquals(errorDto.getStatus(),400);
     }
@@ -138,7 +144,7 @@ public class AddNewContact {
         ErrorDto errorDto = Provider.getInstance().getGson().fromJson(response.body().string(),ErrorDto.class);
         Object message =  errorDto.getMessage();
         System.out.println("Message: " + message);
-        //   Assert.assertEquals(message,"must not be blank");
+        Assert.assertTrue(message.toString().contains("email=must be a well-formed email address"));
         Assert.assertEquals(errorDto.getError(),"Bad Request");
         Assert.assertEquals(errorDto.getStatus(),400);
     }

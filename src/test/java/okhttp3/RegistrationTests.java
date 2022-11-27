@@ -51,7 +51,7 @@ public class RegistrationTests {
         Object message =  errorDto.getMessage();
         System.out.println("Message:" + message);
 
-      //  Assert.assertEquals(message,"username=must be a well-formed email address");
+        Assert.assertTrue(message.toString().contains("username=must be a well-formed email address"));
 
         Assert.assertEquals(errorDto.getError(),"Bad Request");
         Assert.assertEquals(errorDto.getStatus(),400);
@@ -77,7 +77,7 @@ public class RegistrationTests {
         Object message =  errorDto.getMessage();
         System.out.println("Message:" + message);
 
-      //  Assert.assertEquals(message,"password= At least 8 characters; Must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number; Can contain special characters [@$#^&*!]");
+        Assert.assertTrue(message.toString().contains("password= At least 8 characters; Must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number; Can contain special characters [@$#^&*!]"));
         Assert.assertEquals(errorDto.getError(),"Bad Request");
         Assert.assertEquals(errorDto.getStatus(),400);
     }
