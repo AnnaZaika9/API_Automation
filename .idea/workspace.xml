@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="25586d22-959f-4573-9024-ab74c10ce4c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/okhttp3/AddNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttp3/AddNewContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/okhttp3/DeleteContactByID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttp3/DeleteContactByID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/okhttp3/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttp3/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
